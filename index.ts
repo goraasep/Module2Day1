@@ -19,21 +19,23 @@ function calcAngleOfTriangle(d1: number, d2: number) {
 }
 
 function dateDiff(date1: string, date2: string) {
-  const oneDay = 1000 * 60 * 60 * 24;
-  const start = new Date(date1);
-  const end = new Date(date2);
-  const diffInTime = end.getTime() - start.getTime();
-  const diffInDays = Math.round(diffInTime / oneDay);
+  const oneDay: number = 1000 * 60 * 60 * 24;
+  const start: Date = new Date(date1);
+  const end: Date = new Date(date2);
+  const diffInTime: number = end.getTime() - start.getTime();
+  const diffInDays: number = Math.round(diffInTime / oneDay);
   console.log("Days difference = " + diffInDays);
   console.log("==========");
 }
 
 function getInitials(name: string) {
   let initials: string[] = name.split(" ");
-  initials = initials.map((i) => {
-    return i.charAt(0).toUpperCase();
-  });
-  console.log(initials);
+  let init: string = initials
+    .map((i) => {
+      return i.charAt(0).toUpperCase();
+    })
+    .join("");
+  console.log(init);
   console.log("==========");
 }
 
